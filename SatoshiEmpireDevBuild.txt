@@ -40,7 +40,7 @@ Buttons
 					desc:Click to mine some precious Satoshis!
 					on click:yield 1 Satoshis
 					class:bigButton
-					icon:https://i.imgur.com/TDG0EeN.png
+					icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
  
 Resources
 		*Satoshis|Sats
@@ -58,7 +58,7 @@ Buildings
 				desc:The first ever Satoshi miner. Incredibly old hardware, pretty difficult to mine Sats with. (Yields 0.05 Sats per second, per miner).
 				cost:10 Satoshis
 				on tick:yield 0.05 Satoshis
-				icon:https://i.imgur.com/TDG0EeN.png
+				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
 				unlocked
 		
 		*TestBuilding2
@@ -66,7 +66,7 @@ Buildings
 				desc:A (slightly) less ancient Satoshi miner. still full of cobwebs... But hey, it's got an extra fan. (Yields 0.1 Sats per second, per miner).
 				cost:150 Satoshis
 				on tick:yield 0.1 Satoshis
-				icon:https://i.imgur.com/TDG0EeN.png
+				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
 				req:25 TestBuilding1
 				
 				
