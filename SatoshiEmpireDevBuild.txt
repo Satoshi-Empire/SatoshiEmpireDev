@@ -75,7 +75,7 @@ Buildings
 				name:TestMiner3
 				desc:Test Miner 3
 				cost: 500 Satoshis
-				on tick:yield 0.45 Satoshis
+				on tick:yield 0.25 Satoshis
 				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
 				tags:BTC Common
 				req:15 TestBuilding2
@@ -116,5 +116,10 @@ CSS
 	#game.filtersOn .thing.cantAfford.notOwned
 	{
 		filter:blur(3px);
+	}
+	
+	.icon
+	{	
+		float:left;
 	}
  
