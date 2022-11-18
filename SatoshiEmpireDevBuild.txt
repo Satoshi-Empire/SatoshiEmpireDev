@@ -91,7 +91,7 @@ CSS
 	#game
 	{
 		background:black;
-		font-family:"sans-serif",verdana;
+		font-family:"OCR A Std",monospace;
 		color:white;
 	}
  
