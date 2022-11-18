@@ -59,7 +59,8 @@ Buildings
 				cost:10 Satoshis
 				on tick:yield 0.05 Satoshis
 				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
-				unlocked
+				tags:BTC Common 
+				req:10 Satoshis
 		
 		*TestBuilding2
 				name:DustMiner 3001
@@ -67,7 +68,18 @@ Buildings
 				cost:150 Satoshis
 				on tick:yield 0.1 Satoshis
 				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
-				req:25 TestBuilding1
+				tags:BTC Common
+				req:20 TestBuilding1
+				
+		*TestBuilding3
+				name:TestMiner3
+				desc:Test Miner 3
+				cost: 500 Satoshis
+				on tick:yield 0.45 Satoshis
+				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
+				tags:BTC Common
+				req:15 TestBuilding2
+				
 				
 				
 				
