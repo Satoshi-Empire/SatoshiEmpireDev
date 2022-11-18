@@ -1,0 +1,108 @@
+Let's make a game!
+		name:SatoshiEmpire 	//Game name//
+		by:SatoshiEmpireStudios. 	//Author//
+		desc:Coming Soon! 	//Game description//
+		created:11/16/2022 	//game creation date//
+		updated:11/18/2022 	//Most recent update//
+		version:1.00 	//Game Version//
+ 
+Settings
+		building cost increase:109% //building cost increase rate//
+		building cost refund:49% //building cost refund rate//
+ 
+Layout
+	*main
+		contains:res, buttons
+		header:<t>Satoshi Empire Test Build</t>
+	*res
+		contains:Resources
+		class:fullWidth
+		footer:Version 0.002(Test Build)
+	*buttons
+		contains:Buttons
+	*store
+		contains:buildings, upgrades
+		*buildings
+			contains:BulkDisplay, Buildings
+			header:Buildings
+			tooltip origin:left
+		*upgrades
+			contains:Upgrades
+			header:Upgrades
+			costs:hide
+			names:hide
+ 
+ 
+ 
+Buttons
+		*SatoshiButton
+					name:Mine Satoshis!
+					desc:Click to mine some precious Satoshis!
+					on click:yield 1 Satoshis
+					class:bigButton
+					icon:https://i.imgur.com/TDG0EeN.png
+ 
+Resources
+		*Satoshis|Sats
+				name:Satoshi|Sats
+				desc:The Satoshi(Sats) are the smallest unit of a whole Bitcoin(BTC). There are exactly 100,000,000 Sats in 1 Bitcoin.
+				show earned
+ 
+ 
+Buildings
+		*TEMPLATE
+				on click:anim glow
+ 
+		*TestBuilding1
+				name:DustMiner 3000
+				desc:The first ever Satoshi miner. Incredibly old hardware, pretty difficult to mine Sats with. (Yields 0.05 Sats per second, per miner).
+				cost:10 Satoshis
+				on tick:yield 0.05 Satoshis
+				icon:https://i.imgur.com/TDG0EeN.png
+				unlocked
+		
+		*TestBuilding2
+				name:DustMiner 3001
+				desc:A (slightly) less ancient Satoshi miner. still full of cobwebs... But hey, it's got an extra fan. (Yields 0.1 Sats per second, per miner).
+				cost:150 Satoshis
+				on tick:yield 0.1 Satoshis
+				icon:https://i.imgur.com/TDG0EeN.png
+				req:25 TestBuilding1
+				
+				
+				
+Upgrades
+		*TEMPLATE
+				on click:anim glow
+ 
+ 
+ 
+		*TerraHashBoost1	
+			name:kH Upgrade 1
+			desc:A tiny readjustment to your mining configuration allows increased airflow & intake. Not much, but anything helps. (When purchased, Multiplies Yield of DustMiner 3000 by 2).
+			passive:multiply yield of TestBuilding1 by 2
+			cost:300 Satoshis
+			req:25 TestBuilding1
+ 
+ 
+ 
+ 
+CSS
+	#game
+	{
+		background:black;
+		font-family:"sans-serif",verdana;
+		color:white;
+	}
+ 
+	.thing
+	{
+		border-radius:4px;
+		background:rbga(255,255,255,0.5);
+	}
+ 
+	#game.filtersOn .thing.cantAfford.notOwned
+	{
+		filter:blur(3px);
+	}
+ 
