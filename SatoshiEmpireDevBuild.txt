@@ -17,20 +17,20 @@ Layout
 	*res
 		contains:Resources
 		class:fullWidth
-		footer:Version 0.002(Test Build)
+		footer:Version 0.05(Test Build)
 	*buttons
 		contains:Buttons
 	*store
 		contains:buildings, upgrades
 		*buildings
-			contains:BulkDisplay, Buildings
+			contains:Buildings
 			header:Buildings
 			tooltip origin:left
 		*upgrades
 			contains:Upgrades
 			header:Upgrades
-			costs:hide
-			names:hide
+			costs:show
+			names:show
  
  
  
@@ -46,6 +46,11 @@ Resources
 		*Satoshis|Sats
 				name:Satoshi|Sats
 				desc:The Satoshi(Sats) are the smallest unit of a whole Bitcoin(BTC). There are exactly 100,000,000 Sats in 1 Bitcoin.
+				show earned
+		
+		*Litecoin|LTC
+				name:LiteCoin|LTC
+				desc: Litecoin lol
 				show earned
  
  
@@ -80,6 +85,15 @@ Buildings
 				tags:BTC Common
 				req:15 TestBuilding2
 				
+		*TestBuilding4
+				name:TestMiner4
+				desc:Test Miner 4
+				cost:1000 Satoshis
+				on tick:yield 0.475 Satoshis
+				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
+				tags:BTC Common
+				req:25 
+				
 				
 				
 				
@@ -95,6 +109,14 @@ Upgrades
 			passive:multiply yield of TestBuilding1 by 2
 			cost:300 Satoshis
 			req:25 TestBuilding1
+			
+		*TerraHashBoost2
+			name:kH Upgrade 2
+			desc:A slightly better cooling mechanism granting increased Sat production. (When purchased, multiplies yield of all DustMiners by 2).
+			passive:multiply yield of TestBuilding1 by 2
+			cost:950 Satoshis
+			req:25 TestBuilding2
+			
  
  
  
@@ -120,6 +142,6 @@ CSS
 	
 	.icon
 	{	
-		float:left;
+		align:left
 	}
  
