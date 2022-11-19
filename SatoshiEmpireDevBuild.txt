@@ -1,10 +1,11 @@
 Let's make a game!
 		name:SatoshiEmpire 	//Game name//
 		by:SatoshiEmpireStudios. 	//Author//
-		desc:Coming Soon! 	//Game description//
+		desc:Coming Soon! V0.05 Alpha	//Game description//
 		created:11/16/2022 	//game creation date//
 		updated:11/18/2022 	//Most recent update//
-		version:1.00 	//Game Version//
+		/*Don't use version, apparently its broken
+		just put it in the desc or name*/
  
 Settings
 		building cost increase:109% //building cost increase rate//
@@ -35,7 +36,7 @@ Layout
  
  
 Buttons
-		*SatoshiButton
+		*SatoshiButton|ButtonI
 					name:Mine Satoshis!
 					desc:Click to mine some precious Satoshis!
 					on click:yield 1 Satoshis
@@ -43,12 +44,12 @@ Buttons
 					icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
  
 Resources
-		*Satoshis|Sats
+		*Satoshis|Sats|ResourceI
 				name:Satoshi|Sats
 				desc:The Satoshi(Sats) are the smallest unit of a whole Bitcoin(BTC). There are exactly 100,000,000 Sats in 1 Bitcoin.
 				show earned
 		
-		*Litecoin|LTC
+		*Litecoin|LTC|ResourceII
 				name:LiteCoin|LTC
 				desc: Litecoin lol
 				show earned
@@ -58,7 +59,7 @@ Buildings
 		*TEMPLATE
 				on click:anim glow
  
-		*TestBuilding1
+		*TestBuilding1|BuildingI
 				name:DustMiner 3000
 				desc:The first ever Satoshi miner. Incredibly old hardware, pretty difficult to mine Sats with. (Yields 0.05 Sats per second, per miner).
 				cost:10 Satoshis
@@ -67,7 +68,7 @@ Buildings
 				tags:BTC Common 
 				req:10 Satoshis
 		
-		*TestBuilding2
+		*TestBuilding2|BuildingII
 				name:DustMiner 3001
 				desc:A (slightly) less ancient Satoshi miner. still full of cobwebs... But hey, it's got an extra fan. (Yields 0.1 Sats per second, per miner).
 				cost:150 Satoshis
@@ -76,7 +77,7 @@ Buildings
 				tags:BTC Common
 				req:20 TestBuilding1
 				
-		*TestBuilding3
+		*TestBuilding3|BuildingIII
 				name:TestMiner3
 				desc:Test Miner 3
 				cost: 500 Satoshis
@@ -85,7 +86,7 @@ Buildings
 				tags:BTC Common
 				req:15 TestBuilding2
 				
-		*TestBuilding4
+		*TestBuilding4|BuildingIV
 				name:TestMiner4
 				desc:Test Miner 4
 				cost:1000 Satoshis
@@ -103,16 +104,18 @@ Upgrades
  
  
  
-		*TerraHashBoost1	
+		*TerraHashBoost1|UpgradeI
 			name:kH Upgrade 1
 			desc:A tiny readjustment to your mining configuration allows increased airflow & intake. Not much, but anything helps. (When purchased, Multiplies Yield of DustMiner 3000 by 2).
+			icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
 			passive:multiply yield of TestBuilding1 by 2
 			cost:300 Satoshis
 			req:25 TestBuilding1
 			
-		*TerraHashBoost2
+		*TerraHashBoost2|UpgradeII
 			name:kH Upgrade 2
 			desc:A slightly better cooling mechanism granting increased Sat production. (When purchased, multiplies yield of all DustMiners by 2).
+			icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
 			passive:multiply yield of TestBuilding1 by 2
 			cost:950 Satoshis
 			req:25 TestBuilding2
