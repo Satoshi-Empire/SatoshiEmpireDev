@@ -1,7 +1,7 @@
 Let's make a game!
 		name:SatoshiEmpire 	//Game name//
 		by:SatoshiEmpireStudios. 	//Author//
-		desc:Coming Soon! V0.05 Alpha	//Game description//
+		desc:Coming Soon! V0.1 Alpha	//Game description//
 		created:11/16/2022 	//game creation date//
 		updated:11/18/2022 	//Most recent update//
 		/*Don't use version, apparently its broken
@@ -53,6 +53,14 @@ Resources
 				name:LiteCoin|LTC
 				desc: Litecoin lol
 				show earned
+				
+		*Solana|SOL|ResourceIII
+				name:Solana|SOL
+				show earned
+		
+		*Dogecoin|DOGE|ResourceIV
+				name:Dogecoin|DOGE
+				show earned
  
  
 Buildings
@@ -60,43 +68,98 @@ Buildings
 				on click:anim glow
  
 		*TestBuilding1|BuildingI
-				name:DustMiner 3000
+				name:Test
 				desc:The first ever Satoshi miner. Incredibly old hardware, pretty difficult to mine Sats with. (Yields 0.05 Sats per second, per miner).
-				cost:10 Satoshis
-				on tick:yield 0.05 Satoshis
+				cost:1 Satoshis
+				on tick:yield 1 Satoshis
+				on tick:yield 1 Litecoin
+				on tick:yield 1 Solana
 				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
 				tags:BTC Common 
 				req:10 Satoshis
 		
 		*TestBuilding2|BuildingII
-				name:DustMiner 3001
+				name:Test
 				desc:A (slightly) less ancient Satoshi miner. still full of cobwebs... But hey, it's got an extra fan. (Yields 0.1 Sats per second, per miner).
-				cost:150 Satoshis
-				on tick:yield 0.1 Satoshis
+				cost:1 Satoshis
+				on tick:yield 1 Satoshis
 				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
 				tags:BTC Common
 				req:20 TestBuilding1
 				
 		*TestBuilding3|BuildingIII
-				name:TestMiner3
+				name:Test
 				desc:Test Miner 3
-				cost: 500 Satoshis
-				on tick:yield 0.25 Satoshis
+				cost:1 Satoshis
+				on tick:yield 1 Satoshis
 				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
 				tags:BTC Common
 				req:15 TestBuilding2
 				
 		*TestBuilding4|BuildingIV
-				name:TestMiner4
+				name:Test
 				desc:Test Miner 4
-				cost:1000 Satoshis
-				on tick:yield 0.475 Satoshis
+				cost:1 Satoshis
+				on tick:yield 1 Satoshis
 				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
 				tags:BTC Common
-				req:25 
+				req:25 TestBuilding3
+				
+		*TestBuilding5|BuildingV
+				name:Test
+				desc:Test Miner 5
+				cost:1 Satoshis
+				on tick:yield 1 Satoshis
+				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
+				tags:BTC Common
+				req:25 TestBuilding4
+				
+		*TestBuilding6|BuildingVI
+				name:Test
+				desc:Test Miner 6
+				cost:1 Satoshis
+				on tick:yield 1 Satoshis
+				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
+				tags:BTC Common
+				req:25 TestBuilding5
+				
+		*TestBuilding7|BuildingVII
+				name:Test
+				desc:Test Miner 7
+				cost:1 Satoshis
+				on tick:yield 1 Satoshis
+				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
+				tags:BTC Common
+				req:25 TestBuilding6
 				
 				
+		*TestBuilding8|BuildingVIII
+				name:Test
+				desc:Test Miner 8
+				cost:1 Satoshis
+				on tick:yield 1 Satoshis
+				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
+				tags:BTC Common
+				req:25 TestBuilding7
 				
+		*TestBuilding9|BuildingIX
+				name:Test
+				desc:Test Miner 9
+				cost:1 Satoshis
+				on tick:yield 1 Satoshis
+				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
+				tags:BTC Common
+				req:25 TestBuilding8
+				
+		*TestBuilding10|BuildingX
+				name:Test
+				desc:Test Miner 10
+				cost:1 Satoshis
+				on tick:yield 1 Satoshis
+				icon:https://raw.githubusercontent.com/Satoshi-Empire/SatoshiEmpireDev/main/Assets/placeholderpixel.png
+				tags:BTC Common
+				req:25 TestBuilding9
+		
 				
 Upgrades
 		*TEMPLATE
